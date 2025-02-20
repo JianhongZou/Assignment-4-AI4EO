@@ -57,4 +57,4 @@ plt.scatter(centers[:,  0], centers[:,  1], c='black', s=200, alpha=0.5)
 
 plt.show()
 ```
-[picture](https://imgur.com/a/S5akGSx)
+![image name](https://imgur.com/a/S5akGSx)
