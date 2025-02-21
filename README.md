@@ -61,7 +61,7 @@ plt.show()
 ```
 
 
-![Logo](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/2.png)
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/0.png)
 
 
 ### GMM plotting
@@ -85,7 +85,7 @@ plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5)
 plt.title('Gaussian Mixture Model')
 plt.show()
 ```
-
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/1.png)
 ## Image Classification
 Now, let's explore the application of these unsupervised methods to image classification tasks, focusing specifically on distinguishing between sea ice and leads in Sentinel-2 imagery.
 
@@ -134,6 +134,7 @@ plt.show()
 
 del kmeans, labels, band_data, band_stack, valid_data_mask, X, labels_image
 ```
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/2.png)
 ### GMM Implementation
 ```python
 import rasterio
@@ -178,6 +179,8 @@ plt.title('GMM clustering on Sentinel-2 Bands')
 plt.colorbar(label='Cluster Label')
 plt.show()
 ```
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/3.png)
+
 
 ## Altimetry Classification
 ### Read in Functions Needed
@@ -468,12 +471,14 @@ plt.fill_between(range(len(mean_lead)), mean_lead - std_lead, mean_lead + std_le
 plt.title('Plot of mean and standard deviation for each class')
 plt.legend()
 ```
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/4.png)
 ### plot of all the echos
 ```python
 x = np.stack([np.arange(1,waves_cleaned.shape[1]+1)]*waves_cleaned.shape[0])
 plt.plot(x,waves_cleaned)  # plot of all the echos
 plt.show()
 ```
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/5.png)
 ### plot echos for the lead cluster
 ```python
 # plot echos for the lead cluster
@@ -481,12 +486,14 @@ x = np.stack([np.arange(1,waves_cleaned[clusters_gmm==1].shape[1]+1)]*waves_clea
 plt.plot(x,waves_cleaned[clusters_gmm==1])  # plot of all the echos
 plt.show()
 ```
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/6.png)
 ### plot echos for the sea ice cluster
 ```python
 x = np.stack([np.arange(1,waves_cleaned[clusters_gmm==0].shape[1]+1)]*waves_cleaned[clusters_gmm==0].shape[0])
 plt.plot(x,waves_cleaned[clusters_gmm==0])  # plot of all the echos
 plt.show()
 ```
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/7.png)
 ## Scatter Plots of Clustered Data
 
 This code visualizes the clustering results using scatter plots, where different colors represent different clusters (`clusters_gmm`).
@@ -504,6 +511,10 @@ plt.scatter(data_cleaned[:,1],data_cleaned[:,2],c=clusters_gmm)
 plt.xlabel("PP")
 plt.ylabel("SSD")
 ```
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/8.png)
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/9.png)
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/10.png)
+
 
 ## Waveform Alignment Using Cross-Correlation
 
@@ -528,7 +539,9 @@ for aligned_wave in aligned_waves:
     plt.plot(aligned_wave)
 
 plt.title('Plot of 10 equally spaced functions where clusters_gmm = 0 (aligned)')
+
 ```
+![image](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/11.png)
 ## Compare with ESA data
 In the ESA dataset, sea ice = 1 and lead = 2. Therefore, we need to subtract 1 from it so our predicted labels are comparable with the official product labels.
 ```pyhton
