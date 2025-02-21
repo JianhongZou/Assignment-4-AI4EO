@@ -60,6 +60,10 @@ plt.scatter(centers[:,  0], centers[:,  1], c='black', s=200, alpha=0.5)
 plt.show()
 ```
 
+
+![Logo](https://github.com/JianhongZou/Assignment-4-AI4EO/raw/master/2.png)
+
+
 ### GMM plotting
 ```python
 from sklearn.mixture import GaussianMixture
